@@ -7,7 +7,9 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-app.use(express.static(__dirname + "/../"));
+const path = require("path");
+app.use(express.static(path.join(__dirname, "..", "client")));
+
 
 const words = JSON.parse(fs.readFileSync("words.json", "utf8"));
 
@@ -134,6 +136,9 @@ function startNextRound(roomCode) {
     startNextRound(roomCode);
   }, room.duration * 1000);
 }
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "client", "index.html"));
+});
 
 server.listen(3000, () => {
   console.log("✅ Server running at http://localhost:3000");
