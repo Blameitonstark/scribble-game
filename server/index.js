@@ -39,6 +39,7 @@ io.on("connection", (socket) => {
     };
     socket.join(roomCode);
     socket.roomCode = roomCode;
+    socket.emit("roomCreated", roomCode);
   });
 
   socket.on("joinRoom", ({ username, roomCode }) => {
