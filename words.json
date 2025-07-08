@@ -1,0 +1,49 @@
+{
+  "easy": [
+    "apple", "ball", "cat", "dog", "sun", "moon", "car", "tree", "book", "shoe",
+    "fish", "milk", "hat", "pen", "cup", "key", "bag", "fan", "star", "leaf",
+    "egg", "frog", "lamp", "fork", "spoon", "plate", "clock", "bell", "shirt", "pants",
+    "bed", "door", "grass", "nose", "ear", "arm", "leg", "toe", "bee", "ant",
+    "cow", "sheep", "goat", "duck", "soap", "box", "mug", "jug", "tent", "balloon",
+    "ice", "ring", "drum", "net", "chair", "table", "chalk", "cheese", "corn", "bread",
+    "cake", "pie", "banana", "grape", "orange", "plum", "mango", "lemon", "peach", "pear",
+    "bus", "van", "bike", "train", "truck", "plane", "ship", "boat", "bat", "stick",
+    "rope", "toy", "top", "glass", "curtain", "dustbin", "tap", "mat", "broom", "button",
+    "soap", "comb", "bucket", "mirror", "brush", "nail", "candle", "stone", "feather", "coin",
+    "glove", "straw", "quilt", "pillow", "paper", "eraser", "board", "bag", "crayon", "can",
+    "flute", "pan", "fan", "kite", "hen", "rat", "pot", "spider", "cloud", "sky",
+    "rain", "snow", "ice", "hill", "grass", "road", "path", "leaf", "mud", "sand",
+    "ink", "tag", "zip", "lid", "lid", "cap", "sock", "jug", "pen", "web"
+  ],
+  "medium": [
+    "guitar", "rocket", "robot", "camera", "bottle", "castle", "train", "cloud", "pencil",
+    "ladder", "hammer", "broom", "bridge", "dragon", "glasses", "trumpet", "trophy", "paintbrush", "ballerina",
+    "umbrella", "jungle", "blanket", "pajamas", "remote", "castle", "mirror", "wagon", "parrot", "beach",
+    "cactus", "coconut", "island", "engine", "helmet", "skirt", "blouse", "circle", "square", "triangle",
+    "fridge", "curtain", "napkin", "basket", "bucket", "candle", "torch", "carpet", "sofa", "radio",
+    "planet", "comet", "asteroid", "rocketship", "unicorn", "mermaid", "pirate", "superhero", "magnet", "fairy",
+    "caterpillar", "chameleon", "zebra", "panda", "kangaroo", "cheetah", "fox", "crocodile", "rhino", "peacock",
+    "dancer", "fisherman", "tailor", "doctor", "farmer", "singer", "chef", "painter", "scientist", "clown",
+    "market", "school", "hospital", "library", "cinema", "theater", "circus", "temple", "station", "airport",
+    "ladle", "grater", "oven", "stove", "syringe", "needle", "bandage", "trolley", "wheelbarrow", "barrel",
+    "diary", "scissors", "stapler", "compass", "ruler", "marker", "paint", "sketch", "blueprint", "cartoon",
+    "firetruck", "ambulance", "bulldozer", "crane", "helicopter", "submarine", "spaceship", "tractor", "van", "jeep",
+    "lipstick", "eyeliner", "mirror", "wallet", "purse", "watch", "chain", "pendant", "anklet", "bangle"
+  ],
+  "hard": [
+    "microscope", "satellite", "pyramid", "electricity", "xylophone", "refrigerator", "telescope", "headphones",
+    "helicopter", "motorcycle", "lightning", "earthquake", "constellation", "snowmobile", "skateboard", "amphibian",
+    "typewriter", "binoculars", "volcano", "parachute", "artillery", "ballpoint", "thermometer", "microwave",
+    "geyser", "laboratory", "propeller", "accordion", "fireplace", "blackhole", "galaxy", "tsunami", "avalanche",
+    "windmill", "tornado", "earthworm", "megaphone", "camouflage", "saxophone", "electrician", "photocopy", "quarantine",
+    "reptilian", "interview", "hieroglyph", "combustion", "experiment", "hydrogen", "oxygen", "neutron", "gravity", "friction",
+    "pollution", "revolution", "submarine", "abduction", "invader", "invisible", "mutant", "android", "barricade", "catapult",
+    "levitation", "manuscript", "meteorite", "narration", "nightmare", "omnivore", "oxygenate", "pendulum", "photogenic", "prosthetic",
+    "quadruped", "recollection", "sabotage", "specimen", "spectrum", "sphinx", "syringe", "tachometer", "telescope", "vaccination",
+    "vampire", "ventilator", "vibration", "walkie-talkie", "whirlpool", "zookeeper", "bazooka", "bulldozer", "conveyor", "excavator",
+    "fossil", "hierarchy", "mannequin", "navigation", "nucleus", "parasite", "phenomenon", "predator", "protoplasm", "radiation",
+    "receptor", "satellite", "scarecrow", "skeleton", "stethoscope", "telescope", "transistor", "ultrasound", "valkyrie", "warehouse",
+    "zoologist", "turbulence", "hypothesis", "anatomy", "archaeology", "aviation", "climatology", "detonation", "encryption", "filtration",
+    "geothermal", "immigration", "infrastructure", "jurisdiction", "kinetics", "legislation", "magnetism", "nanometer", "oscilloscope", "photon"
+  ]
+}

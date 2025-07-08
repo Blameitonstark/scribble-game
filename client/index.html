@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scribble Game 🎨</title>
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #d1e8ff, #f9e8ff);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+  }
+
+  h2, h3 {
+    margin-top: 10px;
+    color: #222;
+  }
+
+  input, button, select {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  button {
+    background: #6c5ce7;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: #341f97;
+    transform: scale(1.05);
+  }
+
+  #canvas {
+    border-radius: 12px;
+    border: 2px solid #444;
+    background: white;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: crosshair;
+  }
+
+  #messages {
+    height: 120px;
+    overflow-y: auto;
+    border: 1px solid #aaa;
+    background: #ffffffc9;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  #scoreboard, #finalScoreboard {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto;
+    max-width: 300px;
+  }
+
+  #scoreboard li, #finalScoreboard li {
+    padding: 8px;
+    margin: 4px 0;
+    background: #ffeaa7;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #joinScreen, #hostLobby, #gameScreen, #gameOverScreen {
+    max-width: 600px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+</style>
+
+</head>
+<body>
+  <div id="joinScreen">
+    <h2>🎨 Welcome to Scribble Game</h2>
+    <input type="text" id="usernameInput" placeholder="Enter your name" />
+    <br><br>
+    <button id="createBtn">Create Game</button>
+    <br><br>
+    <input type="text" id="roomCodeInput" placeholder="Enter Room Code" maxlength="5" />
+    <button id="joinBtn">Join Game</button>
+  </div>
+
+  <div id="hostLobby" class="hidden">
+    <h2>Host Lobby</h2>
+    <label>Rounds: <input type="number" id="roundsInput" value="5" min="1" max="10" /></label><br>
+    <label>Time per Round: <input type="number" id="timeInput" value="30" min="10" max="120" /></label><br>
+    <label>Difficulty:
+      <select id="difficultyInput">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+        <option value="mixed">Mixed</option>
+      </select>
+    </label><br><br>
+    <button id="startGameBtn">Start Game</button>
+  </div>
+
+  <div id="gameScreen" class="hidden">
+    <h2 id="currentDrawer"></h2>
+    <div id="roundInfo"></div>
+    <div id="wordDisplay"></div>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <br>
+    Color: <input type="color" id="colorPicker" value="#000000" />
+    Size:
+    <select id="brushSize">
+      <option value="2">2px</option>
+      <option value="4">4px</option>
+      <option value="6">6px</option>
+      <option value="8">8px</option>
+    </select>
+    <button id="clearCanvas">Clear</button>
+    <div>
+      <input type="text" id="guessInput" placeholder="Enter your guess..." />
+      <button id="sendGuess">Send</button>
+    </div>
+    <div id="messages"></div>
+    <div style="margin-top: 15px;">
+  <a href="https://discord.gg/UZPKKfj6" target="_blank">
+    <button style="padding: 10px 20px; font-size: 16px; background-color: #5865F2; color: white; border: none; border-radius: 8px; cursor: pointer;">
+      🎧 Join Voice Chat on Discord
+    </button>
+  </a>
+</div>
+
+    <h3>Scoreboard</h3>
+    <ul id="scoreboard"></ul>
+  </div>
+
+  <div id="gameOverScreen" class="hidden">
+    <h2>🎉 Game Over!</h2>
+    <h3>Final Scores:</h3>
+    <ul id="finalScoreboard"></ul>
+    <button onclick="window.location.reload()">Play Again</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/game.js"></script>
+</body>
+</html>
