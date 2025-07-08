@@ -1,4 +1,14 @@
 const socket = io();
+socket.on("roomCreated", (code) => {
+  document.getElementById("joinScreen").classList.add("hidden");
+  document.getElementById("hostLobby").classList.remove("hidden");
+  
+  // 💡 This is what displays the room code
+  const roomDisplay = document.getElementById("roomCodeDisplay");
+  if (roomDisplay) {
+    roomDisplay.textContent = `Room Code: ${code}`;
+  }
+});
 
 const usernameInput = document.getElementById("usernameInput");
 const roomCodeInput = document.getElementById("roomCodeInput");
